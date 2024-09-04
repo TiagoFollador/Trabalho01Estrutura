@@ -15,6 +15,17 @@ public class Main {
 
         controller.showPillha();
 
+        controller.deleteElemento();
+
+        controller.showPillha();
+        System.out.println();
+        controller.deleteElemento();
+        System.out.println();
+        controller.showPillha();
+        controller.deleteElemento();
+
+        controller.showPillha();
+
     }
 
 }
