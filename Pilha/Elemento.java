@@ -3,10 +3,10 @@ public class Elemento {
     final String dataHora;
     final String descricao;
 
-    public Elemento(String id, String nome, String descricao) {
+    public Elemento(String id, String descricao, String dataHora) {
         this.id = id;
-        this.dataHora = nome;
         this.descricao = descricao;
+        this.dataHora = dataHora;
     }
 
     public String getId() {

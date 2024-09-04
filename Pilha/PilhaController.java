@@ -4,14 +4,14 @@ public class PilhaController {
     public PilhaController(){
         this.pilha = new Pilha();
     }
-    public void inserirDado(Node dado){
+    private void inserirDadoPilha(Node dado){
         dado.setAnterior(pilha.getTopo());
         pilha.setTopo(dado);
     }
 
     public void createNode(Elemento elemento){
         Node node = new Node(elemento);
-        inserirDado(node);
+        inserirDadoPilha(node);
     }
     public void showPillha(){
         Node node = this.pilha.getTopo();
@@ -20,6 +20,11 @@ public class PilhaController {
             System.out.println("ID: " + elemento.getId() + " Descricao: " + elemento.getDescricao() + " Data Hora: " + elemento.getDataHora());
             node = node.getAnterior();
         } while (node != null);
+    }
 
+    public void deleteElemento(){
+        Node node = this.pilha.getTopo();
+        pilha.setTopo(node.getAnterior());
+        node.setAnterior(null);
     }
 }
