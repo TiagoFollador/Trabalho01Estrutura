@@ -55,6 +55,16 @@ public class FilaController {
         } while (node != null);
     }
 
+    public Node showFilaByBack(){
+        Node node = fila.getFim();
+        do {
+            Elemento elemento = node.getElemento();
+            System.out.print("--> Id: " + elemento.getId() + " Nome: " + elemento.getNome() + " Motivo: " + elemento.getMotivo());
+            node = node.getAnterior();
+
+        } while (node != null);
+    }
+
     /**
      * @param id
      *
