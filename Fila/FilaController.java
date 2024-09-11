@@ -18,7 +18,7 @@ public class FilaController {
      *      e define o novo elemento como o final da fila
      * */
     private void inserirDadoFila(Node dado){
-        if (this.fila == null){
+        if (this.fila.getFim() == null && this.fila.getComeco() == null){
             dado.setProximo(null);
             dado.setAnterior(null);
             fila.setComeco(dado);
@@ -28,6 +28,7 @@ public class FilaController {
             dado.setAnterior(fila.getFim());
             dado.setProximo(null);
             ultimoNode.setProximo(dado);
+            this.fila.setFim(dado);
         }
     }
 
@@ -55,7 +56,7 @@ public class FilaController {
         } while (node != null);
     }
 
-    public Node showFilaByBack(){
+    public void showFilaByBack(){
         Node node = fila.getFim();
         do {
             Elemento elemento = node.getElemento();

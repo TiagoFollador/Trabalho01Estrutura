@@ -62,7 +62,7 @@ public class UserInterface {
     public void deleteDado(){ // metodo que realiza a interacao com o usuario para deletar o elemento topo da fila
         try {
             System.out.println("Deletando o ultimo dado da fila...");
-            controller.deleteElemento();
+            //controller.deleteElemento();
         }   catch (Exception e) {
             e.printStackTrace();
             System.out.println("Algo deu errado...");
