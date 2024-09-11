@@ -11,11 +11,11 @@ public class Node {
         return elemento;
     }
 
-    public Node getAnterior() {
+    public Node getProximo() {
         return anterior;
     }
 
-    public void setAnterior(Node proximo) {
+    public void setProximo(Node proximo) {
         this.anterior = proximo;
     }
 }
