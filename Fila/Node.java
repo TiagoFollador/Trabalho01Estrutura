@@ -1,10 +1,12 @@
 public class Node {
     private Elemento elemento;
     private Node anterior;
+    private Node proximo;
 
     public Node(Elemento elemento) {
         this.elemento = elemento;
         this.anterior = null;
+        this.proximo = null;
     }
 
     public Elemento getElemento() {
@@ -18,4 +20,13 @@ public class Node {
     public void setProximo(Node proximo) {
         this.anterior = proximo;
     }
+
+    public Node getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(Node anterior) {
+        this.anterior = anterior;
+    }
 }
+

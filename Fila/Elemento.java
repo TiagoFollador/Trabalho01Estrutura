@@ -1,7 +1,7 @@
 public class Elemento {
-    final String nome;
-    final String id;
-    final String motivo;
+    private final String nome;
+    private final String id;
+    private final String motivo;
 
     public Elemento(String nome, String id, String motivo) {
         this.nome = nome;

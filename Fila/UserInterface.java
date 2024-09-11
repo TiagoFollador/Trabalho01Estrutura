@@ -71,7 +71,7 @@ public class UserInterface {
 
     public void exibirHistorico(){ // metodo que exibe os dados da pilha, em ordem do ultimo dado inserido ao primeiro
         System.out.println("Exibindo o historico");
-        controller.showfila();
+        controller.showFila();
     }
 
     public void adeus(){ // despedida e agradecimento
