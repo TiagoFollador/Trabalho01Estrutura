@@ -1,25 +1,25 @@
 public class Fila {
-    private Node frente;
-    private Node tras;
+    private Node comeco;
+    private Node fim;
 
 
 
     public Fila(){}
 
-    public void setFrente(Node frente) {
-        this.frente = frente;
+    public Node getComeco() {
+        return comeco;
     }
 
-    public void setTras(Node tras) {
-        this.tras = tras;
+    public void setComeco(Node comeco) {
+        this.comeco = comeco;
     }
 
-    public Node getFrente() {
-        return frente;
+    public Node getFim() {
+        return fim;
     }
 
-    public Node getTras() {
-        return tras;
+    public void setFim(Node fim) {
+        this.fim = fim;
     }
 }
 
