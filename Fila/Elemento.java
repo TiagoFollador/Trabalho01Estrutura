@@ -3,9 +3,9 @@ public class Elemento {
     private final String id;
     private final String motivo;
 
-    public Elemento(String nome, String id, String motivo) {
-        this.nome = nome;
+    public Elemento( String id, String nome, String motivo) {
         this.id = id;
+        this.nome = nome;
         this.motivo = motivo;
     }
 

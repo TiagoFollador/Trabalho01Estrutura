@@ -4,10 +4,11 @@ public class Main {
         FilaController controller = new FilaController();
         UserInterface UI = new UserInterface(controller);
 
-        boolean keepAsking = true;
+        boolean keepAsking;
         do {
-1            keepAsking = UI.app(); // roda o app
+            keepAsking = UI.app(); // roda o app
         } while (keepAsking);
+
 
     }
 }

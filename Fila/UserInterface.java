@@ -51,7 +51,7 @@ public class UserInterface {
             nome = teclado.nextLine();
 
 
-            Elemento elemento = new Elemento(nome, id, motivo);
+            Elemento elemento = new Elemento( id, nome, motivo);
             controller.createNode(elemento);
         }   catch (Exception e) {
             e.printStackTrace();
