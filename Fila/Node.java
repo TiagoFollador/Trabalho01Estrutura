@@ -14,11 +14,11 @@ public class Node {
     }
 
     public Node getProximo() {
-        return anterior;
+        return proximo;
     }
 
     public void setProximo(Node proximo) {
-        this.anterior = proximo;
+        this.proximo = proximo;
     }
 
     public Node getAnterior() {

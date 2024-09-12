@@ -6,7 +6,7 @@ public class Main {
 
         boolean keepAsking = true;
         do {
-            keepAsking = UI.app(); // roda o app
+1            keepAsking = UI.app(); // roda o app
         } while (keepAsking);
 
     }
