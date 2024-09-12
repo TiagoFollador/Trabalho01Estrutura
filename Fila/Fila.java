@@ -15,7 +15,7 @@ public class Fila {
     }
 
     public Node getFim() {
-        return fim;
+        return this.fim;
     }
 
     public void setFim(Node fim) {

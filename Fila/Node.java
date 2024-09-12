@@ -18,7 +18,7 @@ public class Node {
     }
 
     public void setProximo(Node proximo) {
-        this.anterior = proximo;
+        this.proximo = proximo;
     }
 
     public Node getAnterior() {

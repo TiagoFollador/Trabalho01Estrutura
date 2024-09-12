@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
 public class UserInterface {
-    final FilaController controller;
+    final private FilaController controller;
 
+    private int Counter = 0;
     public UserInterface(FilaController controller) {
         this.controller = controller;
     }
 
     public boolean app(){ // metodo principal onde rodamos todo o sistema
         showOptions();
-        return chooseOption(option(1,4));
+        return chooseOption(option(1,5));
     }
     /*
      * 1. input
@@ -31,6 +32,8 @@ public class UserInterface {
             case 4:
                 adeus();
                 return false;
+            case 5:
+                controller.showFilaByBack();
             default:
                 return true;
         }
@@ -61,8 +64,16 @@ public class UserInterface {
 
     public void deleteDado(){ // metodo que realiza a interacao com o usuario para deletar o elemento topo da fila
         try {
+            this.Counter++;
             System.out.println("Deletando o ultimo dado da fila...");
-            //controller.deleteElemento();
+            switch (this.Counter){
+                case 1:
+                    controller.deleteElemento("2");
+                case 2:
+                    controller.deleteElemento("4");
+                default:
+                    controller.deleteElemento("1");
+            }
         }   catch (Exception e) {
             e.printStackTrace();
             System.out.println("Algo deu errado...");

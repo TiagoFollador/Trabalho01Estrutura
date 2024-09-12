@@ -25,7 +25,7 @@ public class FilaController {
             fila.setFim(dado);
         } else {
             Node ultimoNode = fila.getFim();
-            dado.setAnterior(fila.getFim());
+            dado.setAnterior(ultimoNode);
             dado.setProximo(null);
             ultimoNode.setProximo(dado);
             this.fila.setFim(dado);
