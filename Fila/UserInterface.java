@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -60,18 +61,44 @@ public class UserInterface {
     }
 
     public void deleteDado(){ // metodo que realiza a interacao com o usuario para deletar o elemento topo da fila
+        Scanner teclado = new Scanner(System.in);
         try {
-            System.out.println("Deletando o ultimo dado da fila...");
-            //controller.deleteElemento();
+            System.out.println("Digite o Id do dado a ser deletado: ");
+            controller.deleteElemento(teclado.next());
         }   catch (Exception e) {
-            e.printStackTrace();
+
             System.out.println("Algo deu errado...");
+            System.out.println("O Id escolhido não existe");;
+
         }
     }
 
     public void exibirHistorico(){ // metodo que exibe os dados da pilha, em ordem do ultimo dado inserido ao primeiro
-        System.out.println("Exibindo o historico");
-        controller.showFila();
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Deseja exibir a \n [1] lista normal \n [2] lista invertida");
+        try{
+            int option = teclado.nextInt();
+            switch (option) {
+                case 1:
+                    System.out.println("Exibindo o historico");
+                    controller.showFila();
+                    break;
+                case 2:
+                    System.out.println("Exibindo o historico inverso");
+                    controller.showFilaByBack();
+                    break;
+
+                default:
+                    System.out.println("Algo deu errado...");
+                    System.out.println("Valor escolhido é invalido, por favor selecione os valores descritos!");
+                    break;
+
+            }
+
+        } catch (Exception e){
+            System.out.println("Algo deu errado...");
+            System.out.println("Valor escolhido é invalido, por favor selecione os valores descritos!");
+        }
     }
 
     public void adeus(){ // despedida e agradecimento
@@ -83,7 +110,7 @@ public class UserInterface {
         System.out.println("\n[2] Retirar um elemento do historico");
         System.out.println("\n[3] Mostrar historico");
         System.out.println("\n[4] Sair");
-        System.out.print(">>> ");
+        System.out.print("Insira sua opção: ");
     }
 
     public int option(int min, int max){ // metodo em que trava a selecao de opcoes para evitar saidas inesperadas
